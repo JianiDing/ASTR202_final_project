@@ -35,14 +35,15 @@ c = 2.998e10 # cm / s
 
 # Test cases. The numerical values of these are in the MNRA paper. 
 # The values match relatively closely
-#print(np.log10(Ry/(k * 1e10)))
-#print(np.log10(Ry* 30/(k * 3)))
-#print(np.log10(2.17e-19/(k * 1e10)))
-#print(np.log10(1.603e-4 * 30/(k*3)))
+#print(np.log10(Ry/(k * 1e10))) # gam2 low
+#print(np.log10(Ry* 30**2/(k * 3))) # gam2 high
+#print(np.log10(2.17e-19/(k * 1e10))) # u low
+#print(np.log10(1.603e-4/(k*3)))# u high
 
 # get gam2 and u in terms of T and nu
-gam2 = lambda T, nu: (h * (nu))/(k * T)
-u = lambda T: Ry / (k * T)
+gam2 = lambda T: Ry/(k * T)
+u = lambda T, nu: (h * nu) / (k * T)
+
 
 # main function to be evaluated 
 
@@ -51,18 +52,19 @@ def j (T, lamb):
     nu = (c / (lamb * 10**-4))
     
     # interpolate the gaunt factor
-    gff = g_interp(np.log10(gam2(T, nu)),np.log10(u(T)))
-    print(-h * nu/(k * T))
-    print('nu is: ', nu)
-    print('gff is: ', gff)
-    print('logu is: ', np.log10(u(T)))
-    print('loggam2 is: ', np.log10(gam2(T, nu)))
+    gff = g_interp(np.log10(gam2(T)),np.log10(u(T, nu)))
+    
+    # transpose the matrix. This is just for consistensy sake with the 
+    # horizontal inputs 
+    gff = np.resize(gff, (1000,))
     
     # evaluate the function 
-    return 5.44 * 10**(-39) * (T**(-1/2)) * gff * np.exp(-h * nu/(k * T)) * nu
+    output = 5.44 * 10**(-39) * (4*np.pi) * (T**(-1/2)) * gff * np.exp(-h * nu/(k * T)) * nu
+    return output
 
 x_values = np.logspace(-1, 1, 1000)
 y_values = j(10000, x_values)
+#print(x_values)
 
 plt.loglog(x_values, y_values)
 plt.show()
