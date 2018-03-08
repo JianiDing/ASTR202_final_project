@@ -1,0 +1,421 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17152,        413]
+NotebookOptionsPosition[     16136,        381]
+NotebookOutlinePosition[     16480,        396]
+CellTagsIndexPosition[     16437,        393]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"4.803207", "*", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "10"}]]}], ")"}], "4"], 
+    RowBox[{"(", 
+     RowBox[{"6.62606885", "*", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "27"}]]}], ")"}]}], 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"9.109383", "*", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "28"}]]}], ")"}], "2"], "*", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"2.998", "*", 
+       SuperscriptBox["10", "10"]}], ")"}], "3"]}]], "*", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    FractionBox[
+     RowBox[{"2.17987", "*", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "11"}]]}], 
+     RowBox[{"1.3807", "*", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "16"}]]}]], ")"}], 
+   FractionBox["1", "2"]], "*", 
+  FractionBox[
+   RowBox[{"32", " ", "*", " ", 
+    SuperscriptBox["\[Pi]", 
+     FractionBox["1", "2"]]}], 
+   RowBox[{"3", " ", "*", " ", "4", " ", "*", " ", "\[Pi]", "*", " ", 
+    SqrtBox["3"]}]]}]], "Input",
+ CellChangeTimes->{{3.729458986919814*^9, 
+  3.7294591148252187`*^9}},ExpressionUUID->"710d5b98-abde-4784-b6a9-\
+20a05a5cdf69"],
+
+Cell[BoxData["5.443862554416166`*^-39"], "Output",
+ CellChangeTimes->{
+  3.7294591179143114`*^9},ExpressionUUID->"128fa9ab-bc74-4a75-bf8a-\
+f97749ef1d7c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox[
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "statC", Typeset`boxes$$ = 
+      TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], "\"statC\"", 
+        "statcoulombs", "\"StatCoulombs\""}, "Quantity", SyntaxForm -> Mod], 
+      Typeset`allassumptions$$ = {}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.4273961`7.082375548394197, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{88., {9., 20.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], "4"], "*", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "erg", Typeset`boxes$$ = TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], "\"ergs\"", "ergs", 
+        "\"Ergs\""}, "Quantity", SyntaxForm -> Mod], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "erg", "template" -> 
+        "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+        "4", "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "*C.erg-_*Unit-"}, {
+          "name" -> "Protein", "desc" -> "a protein", "input" -> 
+           "*C.erg-_*Protein-"}, {
+          "name" -> "DesertClass", "desc" -> "a class of deserts", "input" -> 
+           "*C.erg-_*DesertClass-"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "*C.erg-_*Word-"}}}}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.2961406`6.923042945455476, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{107., {11., 20.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], "/", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "second", Typeset`boxes$$ = 
+      TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], "\"s\"", "seconds", 
+        "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "second", "template" -> 
+        "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+        "3", "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "*C.second-_*Unit-"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "*C.second-_*Word-"}, {
+          "name" -> "Ordinal", "desc" -> "an ordinal number", "input" -> 
+           "*C.second-_*Ordinal-"}}}, {
+       "type" -> "Unit", "word" -> "second", "template" -> 
+        "Assuming ${desc1} for \"${word}\". Use ${desc2} instead", "count" -> 
+        "2", "Values" -> {{
+          "name" -> "Seconds", "desc" -> "seconds of time", "input" -> 
+           "UnitClash_*second.*Seconds--"}, {
+          "name" -> "ArcSeconds", "desc" -> "seconds of arc", "input" -> 
+           "UnitClash_*second.*ArcSeconds--"}}}}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.3202376`6.957017315813285, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{86., {9., 20.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True]}]}], 
+  RowBox[{
+   SuperscriptBox[
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "gram", Typeset`boxes$$ = 
+      TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], "\"g\"", "grams", 
+        "\"Grams\""}, "Quantity", SyntaxForm -> Mod], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "gram", "template" -> 
+        "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+        "2", "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "*C.gram-_*Unit-"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "*C.gram-_*Word-"}}}, {
+       "type" -> "Unit", "word" -> "gram", "template" -> 
+        "Assuming ${desc1} for \"${word}\". Use ${desc2} instead", "count" -> 
+        "2", "Values" -> {{
+          "name" -> "Grams", "desc" -> "grams", "input" -> 
+           "UnitClash_*gram.*Grams--"}, {
+          "name" -> "GramsForce", "desc" -> "grams\[Hyphen]force", "input" -> 
+           "UnitClash_*gram.*GramsForce--"}}}}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.2753257`6.891391745562187, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{86., {11., 20.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], "2"], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      NamespaceBox["LinguisticAssistant",
+       DynamicModuleBox[{Typeset`query$$ = "cm", Typeset`boxes$$ = 
+        TemplateBox[{
+          InterpretationBox["\[InvisibleSpace]", 1], "\"cm\"", "centimeters", 
+          "\"Centimeters\""}, "Quantity", SyntaxForm -> Mod], 
+        Typeset`allassumptions$$ = {{
+         "type" -> "Clash", "word" -> "cm", "template" -> 
+          "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", 
+          "count" -> "3", 
+          "Values" -> {{
+            "name" -> "Unit", "desc" -> "a unit", "input" -> 
+             "*C.cm-_*Unit-"}, {
+            "name" -> "CrystallographicSpaceGroup", "desc" -> "a space group",
+              "input" -> "*C.cm-_*CrystallographicSpaceGroup-"}, {
+            "name" -> "Word", "desc" -> "a word", "input" -> 
+             "*C.cm-_*Word-"}}}}, Typeset`assumptions$$ = {}, 
+        Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.4933405999999999999`7.144691851164499, "Messages" -> {}}}, 
+        DynamicBox[ToBoxes[
+          AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+           Dynamic[Typeset`query$$], 
+           Dynamic[Typeset`boxes$$], 
+           Dynamic[Typeset`allassumptions$$], 
+           Dynamic[Typeset`assumptions$$], 
+           Dynamic[Typeset`open$$], 
+           Dynamic[Typeset`querystate$$]], StandardForm],
+         ImageSizeCache->{93., {9., 20.}},
+         TrackedSymbols:>{
+          Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+           Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+        DynamicModuleValues:>{},
+        UndoTrackedVariables:>{Typeset`open$$}],
+       BaseStyle->{"Deploy"},
+       DeleteWithContents->True,
+       Editable->False,
+       SelectWithContents->True], "/", 
+      NamespaceBox["LinguisticAssistant",
+       DynamicModuleBox[{Typeset`query$$ = "second", Typeset`boxes$$ = 
+        TemplateBox[{
+          InterpretationBox["\[InvisibleSpace]", 1], "\"s\"", "seconds", 
+          "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+        Typeset`allassumptions$$ = {{
+         "type" -> "Clash", "word" -> "second", "template" -> 
+          "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", 
+          "count" -> "3", 
+          "Values" -> {{
+            "name" -> "Unit", "desc" -> "a unit", "input" -> 
+             "*C.second-_*Unit-"}, {
+            "name" -> "Word", "desc" -> "a word", "input" -> 
+             "*C.second-_*Word-"}, {
+            "name" -> "Ordinal", "desc" -> "an ordinal number", "input" -> 
+             "*C.second-_*Ordinal-"}}}, {
+         "type" -> "Unit", "word" -> "second", "template" -> 
+          "Assuming ${desc1} for \"${word}\". Use ${desc2} instead", "count" -> 
+          "2", "Values" -> {{
+            "name" -> "Seconds", "desc" -> "seconds of time", "input" -> 
+             "UnitClash_*second.*Seconds--"}, {
+            "name" -> "ArcSeconds", "desc" -> "seconds of arc", "input" -> 
+             "UnitClash_*second.*ArcSeconds--"}}}}, 
+        Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+        Typeset`querystate$$ = {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.3296776`6.969634433429906, "Messages" -> {}}}, 
+        DynamicBox[ToBoxes[
+          AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+           Dynamic[Typeset`query$$], 
+           Dynamic[Typeset`boxes$$], 
+           Dynamic[Typeset`allassumptions$$], 
+           Dynamic[Typeset`assumptions$$], 
+           Dynamic[Typeset`open$$], 
+           Dynamic[Typeset`querystate$$]], StandardForm],
+         ImageSizeCache->{86., {9., 20.}},
+         TrackedSymbols:>{
+          Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+           Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+        DynamicModuleValues:>{},
+        UndoTrackedVariables:>{Typeset`open$$}],
+       BaseStyle->{"Deploy"},
+       DeleteWithContents->True,
+       Editable->False,
+       SelectWithContents->True]}], ")"}], "3"]}]]], "Input",
+ CellChangeTimes->{{3.729459350969241*^9, 
+  3.7294594630834017`*^9}},ExpressionUUID->"39e62568-b98b-4c3a-ba3f-\
+639e88ab5f4e"],
+
+Cell[BoxData[
+ TemplateBox[{"1",RowBox[{
+     SuperscriptBox["\"s\"", "2"], "\[InvisibleSpace]", "\"erg\"", 
+     "\[ThinSpace]", 
+     SuperscriptBox["\"statC\"", "4"], "\[NegativeMediumSpace]", "\"/(\"", 
+     "\[InvisibleSpace]", 
+     SuperscriptBox["\"g\"", "2"], "\[InvisibleSpace]", 
+     SuperscriptBox["\"cm\"", "3"], "\[InvisibleSpace]", "\")\""}],
+   "second squared erg statcoulombs to the fourth per gram squared centimeter \
+cubed",FractionBox[
+    RowBox[{"\"Ergs\"", " ", 
+      SuperscriptBox["\"Seconds\"", "2"], " ", 
+      SuperscriptBox["\"StatCoulombs\"", "4"]}], 
+    RowBox[{
+      SuperscriptBox["\"Centimeters\"", "3"], " ", 
+      SuperscriptBox["\"Grams\"", "2"]}]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.729459464299831*^9},ExpressionUUID->"046fad96-f2db-4087-a085-\
+a240240aff8d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"1", ",", 
+     FractionBox[
+      RowBox[{"\"\<Ergs\>\"", " ", 
+       SuperscriptBox["\"\<Seconds\>\"", "2"], " ", 
+       SuperscriptBox["\"\<StatCoulombs\>\"", "4"]}], 
+      RowBox[{
+       SuperscriptBox["\"\<Centimeters\>\"", "3"], " ", 
+       SuperscriptBox["\"\<Grams\>\"", "2"]}]]}], "]"}], ",", 
+   "\"\<erg * cm^3 * s^-2\>\""}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.7294596418391857`*^9, {3.7294597879047427`*^9, 3.7294597912477007`*^9}},
+ NumberMarks->False,ExpressionUUID->"cbdda609-4e33-4eb7-806f-9bdaea0d6a41"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Quantity","compat",
+   "\"\\!\\(\\*FractionBox[RowBox[{\\\"\\\\\\\"Ergs\\\\\\\"\\\", \\\" \\\", \
+SuperscriptBox[\\\"\\\\\\\"Seconds\\\\\\\"\\\", \\\"2\\\"], \\\" \\\", \
+SuperscriptBox[\\\"\\\\\\\"StatCoulombs\\\\\\\"\\\", \\\"4\\\"]}], \
+RowBox[{SuperscriptBox[\\\"\\\\\\\"Centimeters\\\\\\\"\\\", \\\"3\\\"], \\\" \
+\\\", SuperscriptBox[\\\"\\\\\\\"Grams\\\\\\\"\\\", \\\"2\\\"]}]]\\) and \
+\\!\\(\\*FractionBox[RowBox[{SuperscriptBox[\\\"\\\\\\\"Centimeters\\\\\\\"\\\
+\", \\\"3\\\"], \\\" \\\", \\\"\\\\\\\"Ergs\\\\\\\"\\\"}], \
+SuperscriptBox[\\\"\\\\\\\"Seconds\\\\\\\"\\\", \\\"2\\\"]]\\) are \
+incompatible units\"",2,12,5,29772264938755354812,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.729459586086909*^9, 3.7294596453249235`*^9, 
+  3.7294597925514607`*^9},ExpressionUUID->"f0f01029-0cca-4220-82ed-\
+e6e740b1ecb9"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.729459586142056*^9, 3.729459645344947*^9, 
+  3.7294597925695367`*^9},ExpressionUUID->"20c71d90-fc9f-4c79-819f-\
+ad769cb12c26"]
+}, Open  ]]
+},
+WindowSize->{1280, 637},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1219, 41, 76, "Input", "ExpressionUUID" -> \
+"710d5b98-abde-4784-b6a9-20a05a5cdf69"],
+Cell[1802, 65, 154, 3, 30, "Output", "ExpressionUUID" -> \
+"128fa9ab-bc74-4a75-bf8a-f97749ef1d7c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1993, 73, 11564, 242, 93, "Input", "ExpressionUUID" -> \
+"39e62568-b98b-4c3a-ba3f-639e88ab5f4e"],
+Cell[13560, 317, 823, 19, 44, "Output", "ExpressionUUID" -> \
+"046fad96-f2db-4087-a085-a240240aff8d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14420, 341, 627, 15, 59, "Input", "ExpressionUUID" -> \
+"cbdda609-4e33-4eb7-806f-9bdaea0d6a41"],
+Cell[15050, 358, 885, 15, 53, "Message", "ExpressionUUID" -> \
+"f0f01029-0cca-4220-82ed-e6e740b1ecb9"],
+Cell[15938, 375, 182, 3, 30, "Output", "ExpressionUUID" -> \
+"20c71d90-fc9f-4c79-819f-ad769cb12c26"]
+}, Open  ]]
+}
+]
+*)
+
