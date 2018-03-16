@@ -24,7 +24,7 @@ def main():
     N = 1e0       
 
     nu = np.logspace(14,16,1000)
-    lam, ynu = two_ph(T,N)
+    lam, y, ynu = two_ph(T,N)
 
     plt.figure(figsize=(7,5))
     plt.loglog(lam,ynu, basex=10, basey=10)
@@ -35,7 +35,7 @@ def main():
     plt.title("Two-photon emission (Brant's 4.1)")
     
     plt.figure(figsize=(5,8))
-    plt.semilogy(nu,ynu/nu, basey=10)
+    plt.semilogy(nu,y, basey=10)
     plt.xlim(3e14,1e15)
     plt.ylim(1e-40,1e-38)
     plt.xlabel('Frequency')
@@ -48,11 +48,12 @@ def two_ph(T,N):
     #import this function to use as a blackbox
     nu = np.logspace(14,16,1000)
     A = 8.23
-    ynu = alpha(T)*g2(nu)/(1+N*q(T)/A)*nu
+    y = alpha(T)*g2(nu)/(1+N*q(T)/A)
+    ynu = y*nu
     
     c = 2.99792e8
     lam = [c/i/1e-6 for i in nu]    #convert to wavelength in microns
-    return lam,ynu
+    return lam,y,ynu
     
 def alpha(T):
     #absorption coefficients
