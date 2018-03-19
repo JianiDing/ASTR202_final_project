@@ -7,18 +7,19 @@ from __future__ import print_function
 from __future__ import division
 import numpy as np
 import matplotlib.pyplot as plt
+import scipy.integrate as integrate
 
 def main():
     #Ne = Np, low density limit  
     N = 1e0
     h = 6.626e-27
     alpha = 3.03e-14    #for H-beta from Table 4.2
-    c = 2.99792e10
+    c_ph = 2.99792e10
     
     #Find emission coefficient of H-beta
     lam = Rydberg(2,4)
-    nu = c/lam
-    jb = alpha*h*N**2*nu/(4*np.pi)  #Eq.4.14 of O&F
+    nu = c_ph/lam
+    jb = alpha*h*N**2/(4*np.pi)  #Eq.4.14 of O&F
     
     #Table 4.2 of O&F
     j = [[2.87, 1, 0.466,0.256,0.158,0.105,0.0730,0.0529,0.0154,0.0064],[0.352,0.354,0.354,0.350,0.350,0.344,0.344]]    
@@ -26,25 +27,43 @@ def main():
     n1 = [2,3]
     balmer = []
     plt.figure(figsize=(7,5))
+    f = open('line_flux.txt', 'w+')
+    f.write('lambda[A]\tFlux[erg cm^-3 s^-3]\tError\n')
+    print('lambda[A]\tFlux[erg cm^-3 s^-3]\tError')
     for k in range(len(n2)):
         for i in range(len(j[k])):                    
             lam = Rydberg(n1[k], n2[k][i])
+            
+            #parameters for Gaussian
+            b = lam/1e-8
+            c = 1e-4*b
+            x = np.linspace(b-5*c, b+5*c, 100)
             if n1[k]==2:
                 if n2[k][i] in n2[1]:
                     balmer.append(j[k][i]*jb)
-                plt.vlines(x=lam/1e-8, ymin=0, ymax = j[k][i]*jb)
+                a = j[k][i]*jb
             elif n1[k]==3:
-                plt.vlines(x=lam/1e-8, ymin=0, ymax = balmer[i]*j[k][i])                
+                a = balmer[i]*j[k][i]
+            
+            inter, err = integrate.quad(lambda x: y(x,lam,a,b,c), b-5*c, b+5*c)
+            f.write('%.3e\t%.3e\t%.3e\n'%(b,inter,err))
+            print('%.3e\t%.3e\t%.3e'%(b,inter,err))
+            plt.plot(x, y(x,lam,a,b,c), color = 'k')
+
 
     plt.axhline(y=0, color='k')
     plt.xlim(1e3, 2e4)
     plt.xlabel('Wavelength [$\AA$]')
-    plt.ylabel('j [$erg \; cm^{-3} \; s^{-1}$]')
+    plt.ylabel('j [$erg \; cm^{-3} \; s^{-1} \; Hz^{-1}$]')
     plt.title('Hydrogen line spectrum')
 
 def Rydberg(n1,n2):
     R = 1.097e5
     return (R*(1/n1**2-1/n2**2))**(-1)
+
+def y(x,lam,a,b,c):
+    rate = 1.47234e+53
+    return a*np.exp(-(x-b)**2/(2*c**2))*rate
 
 if __name__ == '__main__':
     main()
