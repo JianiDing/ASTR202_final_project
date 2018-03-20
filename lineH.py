@@ -30,8 +30,8 @@ def main():
     balmer = []
     plt.figure(figsize=(7,5))
     f = open('line_flux.txt', 'w+')
-    f.write('lambda[A]\tFlux[Jy]\tError\n')
-    print('lambda[A]\tFlux[Jy]\tError')
+    f.write('lambda[A]\tFlux[microJy]\tError\n')
+    print('lambda[A]\tFlux[microJy]\tError')
     
     for k in range(len(n2)):
         for i in range(len(j[k])):                    
