@@ -19,8 +19,9 @@ def main():
     #Find emission coefficient of H-beta
     lam = Rydberg(2,4)
     nu = c_ph/lam
-    d = 7e28 #cm
-    jb = h*nu*rate/(4*np.pi*(d)**2)*1e-29 #Flux of H-beta in Janskies
+    d = 7.98459e28 #cm
+    jb = h*rate/(4*np.pi*(d)**2)/1e-29 #Flux of H-beta in Janskies
+    print(jb)
     
     #Table 4.2 of O&F
     j = [[2.87, 1, 0.466,0.256,0.158,0.105,0.0730,0.0529,0.0154,0.0064],
