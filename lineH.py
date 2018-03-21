@@ -31,9 +31,12 @@ def main():
     balmer = []
     plt.figure(figsize=(7,5))
     f = open('line_flux.txt', 'w+')
-    f.write('lambda[A]\tFlux[microJy]\tError\n')
-    print('lambda[A]\tFlux[microJy]\tError')
+    #f.write('lambda[A]\tFlux[microJy]\tError\n')
+    #print('lambda[A]\tFlux[microJy]\tError')
+    f.write('lambda[A]\tFlux[microJy]\n')
     
+    yvals = []
+    xvals = []
     for k in range(len(n2)):
         for i in range(len(j[k])):                    
             lam = Rydberg(n1[k], n2[k][i])
@@ -50,14 +53,28 @@ def main():
                 a = balmer[i]*j[k][i]
             
             #integrate each line
-            inter, err = integrate.quad(lambda x: gauss(x,lam,a,b,c), b-5*c, b+5*c)
-            f.write('%.3e\t%.3e\t%.3e\n'%(b,inter,err))
-            print('%.3e\t%.3e\t%.3e'%(b,inter,err))
+            #inter, err = integrate.quad(lambda x: gauss(x,lam,a,b,c), b-5*c, b+5*c)
+            #f.write('%.3e\t%.3e\t%.3e\n'%(b,inter,err))
+            #print('%.3e\t%.3e\t%.3e'%(b,inter,err))
             
-            plt.plot(x, gauss(x,lam,a,b,c), color = 'k')
+            #f.write('%.3e\t%.3e\t%.3e\n'%(b,inter,err))
+            #print('%.3e\t%.3e\t%.3e'%(b,inter,err))
+            
+            
+            #plt.plot(x, gauss(x,lam,a,b,c), color = 'k')
+            yvals.append(gauss(x,lam,a,b,c))
+            xvals.append(x)
+            #for i in range(len(x)):
+                #print('%.3e\t%.3e'%(x[i], y[i]))
+    xvals = np.array(xvals).flatten()
+    yvals = np.array(yvals).flatten()
+    yvals = [yvals for _,yvals in sorted(zip(xvals,yvals))]
+    xvals.sort()
+    for i in range(len(xvals)):
+        f.write('%.3e\t%.3e\n'%(xvals[i],yvals[i]))
 
-
-    plt.axhline(y=0, color='k')
+    plt.plot(xvals,yvals)
+    #plt.axhline(y=0, color='k')
     plt.xlim(1e3, 2e4)
     plt.xlabel('Wavelength [$\AA$]')
     plt.ylabel('Flux [$erg \; cm^{-2} \; s^{-1} \; Hz^{-1}$]')
