@@ -1,4 +1,4 @@
-lambda[A]	Flux[microJy]
+#lambda[A]	Flux[microJy]
 3.681e+03	2.904e-11
 3.681e+03	4.788e-11
 3.681e+03	7.814e-11
